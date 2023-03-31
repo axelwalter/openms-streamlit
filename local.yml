@@ -4,10 +4,21 @@ services:
   streamlit:
     build: 
       context: .
-      dockerfile: ./compose/streamlit/Dockerfile
+      dockerfile: ./compose/streamlit/template
+    image: template
+    container_name: template
+    restart: always
+    expose:
+      - "8501"
+    command: cd streamlit-template && streamlit run Template.py
+
+  streamlit:
+    build: 
+      context: .
+      dockerfile: ./compose/streamlit/umetaflow
     image: umetaflow
     container_name: umetaflow
     restart: always
-    ports:
-      - 8501:8501
-    command: streamlit run umetaflow-gui/UmetaFlow.py
+    expose:
+      - "8502"
+    command: cd umetaflow-gui && streamlit run UmetaFlow.py
