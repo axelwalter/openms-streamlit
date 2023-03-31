@@ -3,22 +3,6 @@ version: '3'
 volumes:
   production_traefik: {}
 
-services:
-  streamlit:
-    build: 
-      context: .
-      dockerfile: ./compose/streamlit/template
-    image: template
-    container_name: template
-    restart: always
-    expose:
-      - "8501"
-    command: >
-      sh -c "
-      cd streamlit-template
-      streamlit run Template.py
-      "
-
   streamlit:
     build: 
       context: .
@@ -27,7 +11,7 @@ services:
     container_name: umetaflow
     restart: always
     expose:
-      - "8502"
+      - "8501"
     command: >
       sh -c "
       cd umetaflow-gui
