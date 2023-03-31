@@ -16,7 +16,7 @@ services:
     command: >
       sh -c "
       cd umetaflow-gui
-      streamlit run Umetaflow.py
+      streamlit run UmetaFlow.py
       "
 
   traefik:
