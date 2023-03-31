@@ -13,7 +13,11 @@ services:
     restart: always
     expose:
       - "8501"
-    command: streamlit run streamlit-template/Template.py
+    command: >
+      sh -c "
+      cd streamlit-template
+      streamlit run Template.py
+      "
 
   streamlit:
     build: 
@@ -24,7 +28,11 @@ services:
     restart: always
     expose:
       - "8502"
-    command: streamlit run umetaflow-gui/UmetaFlow.py
+    command: >
+      sh -c "
+      cd umetaflow-gui
+      streamlit run Umetaflow.py
+      "
 
   traefik:
     build:
