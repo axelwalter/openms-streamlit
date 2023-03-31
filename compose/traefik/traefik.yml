@@ -28,7 +28,7 @@ certificatesResolvers:
 http:
   routers:
     web-secure-router:
-      rule: "localhost"
+      rule: "193.196.20.57"
       entryPoints:
         - web-secure
       middlewares:
