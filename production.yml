@@ -12,7 +12,7 @@ services:
     container_name: umetaflow
     restart: always
     expose:
-      - "8502"
+      - "8501"
     command: streamlit run umetaflow-gui/UmetaFlow.py
 
   traefik:
