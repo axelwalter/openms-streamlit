@@ -3,6 +3,7 @@ version: '3'
 volumes:
   production_traefik: {}
 
+services:
   streamlit:
     build: 
       context: .
