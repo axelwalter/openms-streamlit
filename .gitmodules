@@ -1,3 +1,6 @@
 [submodule "umetaflow-gui"]
 	path = umetaflow-gui
 	url = https://github.com/axelwalter/umetaflow-gui.git
+[submodule "streamlit-template"]
+	path = streamlit-template
+	url = https://github.com/axelwalter/streamlit-template.git
