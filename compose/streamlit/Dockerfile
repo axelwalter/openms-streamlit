@@ -13,7 +13,7 @@ enableCORS = false\n\
 " > /root/.streamlit/config.toml'
 
 # copy over and install packages
-COPY ./app/requirements.txt ./requirements.txt
+COPY ./umetaflow-gui/requirements.txt ./requirements.txt
 RUN pip3 install cython
 RUN pip3 install -r requirements.txt
 
