@@ -28,12 +28,12 @@ certificatesResolvers:
 http:
   routers:
     web-secure-router:
-      rule: "193.196.20.57"
+      rule: "Host(`193.196.20.57`)"
       entryPoints:
         - web-secure
       middlewares:
         - csrf
-      service: umetaflow
+      service: streamlit_app
       tls:
         # https://docs.traefik.io/master/routing/routers/#certresolver
         certResolver: letsencrypt
@@ -46,10 +46,10 @@ http:
         hostsProxyHeaders: ["X-CSRFToken"]
 
   services:
-    umetaflow:
+    streamlit_app:
       loadBalancer:
         servers:
-          - url: http://umetaflow:8501
+          - url: http://streamlit_app:8501
 
 providers:
   # https://docs.traefik.io/master/providers/file/
