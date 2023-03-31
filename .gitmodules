@@ -1,0 +1,3 @@
+[submodule "umetaflow-gui"]
+	path = umetaflow-gui
+	url = https://github.com/axelwalter/umetaflow-gui.git
